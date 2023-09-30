@@ -4,18 +4,16 @@
  * @s:string
  * Return:void
  */
-
-void _puts_recursion(char *s){
-
-	if(*s == '\0'){
-		return;}
+void _puts_recursion(char *s)
+{
+if (*s)
+{
 	_putchar(*s);
-	_puts_recursion(s+1);
+	_puts_recursion(s + 1);
+}
+else
+{
+	_putchar('\n');
 }
 
-int main(){
-	char *nlc = "\n";
-	_puts_recursion("Hey bro");
-	_putchar(*nlc);
-	return 0;
 }
